@@ -175,7 +175,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	aerialace: {
 		num: 332,
 		accuracy: true,
-		basePower: 60,
+		basePower: 5,
 		category: "Physical",
 		name: "Aerial Ace",
 		pp: 20,
