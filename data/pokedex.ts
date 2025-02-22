@@ -1,4 +1,20 @@
 export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
+	colossiff: {
+		num: 6901,
+		name: "Colossiff",
+		baseSpecies: "Colossiff",
+		types: ["Rock", "Water"],
+		gender: "N",
+		baseStats: {hp: 150, atk: 105, def: 90, spa: 60, spd: 70, spe: 25},
+		abilities: {0: "Rock Head", 1: "Sheer Force", H: "Rain Dish"},
+		heightm: 3,
+		weightkg: 400,
+		color: "Gray",
+		eggGroups: ["Undiscovered"],
+		gen: 69,
+	},
+
+
 	bulbasaur: {
 		num: 1,
 		name: "Bulbasaur",
