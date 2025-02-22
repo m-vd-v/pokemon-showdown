@@ -177,7 +177,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		accuracy: true,
 		basePower: 5,
 		category: "Physical",
-		name: "Aerial Ace",
+		name: "Aerial Ass",
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, distance: 1, metronome: 1, slicing: 1},
