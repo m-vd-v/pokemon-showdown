@@ -1,4 +1,9 @@
 export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable = {
+
+	colossiff: {
+		tier: "OU"
+	},
+
 	bulbasaur: {
 		tier: "LC",
 	},
