@@ -23,6 +23,17 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	///////////////////////////////////////////////////////////////////
 
 	{
+		section: "krammemon formats"
+	},
+	{
+		name: "[Gen 9 OU] met krammemons",
+		desc: "gen 9 ou met krammemons, wat wil je nog meer weten joh",
+		mod: 'gen9',
+		ruleset: ['Krammemons', 'Sleep Moves Clause', '!Sleep Clause Mod'],
+		banlist: ['Uber', 'AG', 'Arena Trap', 'Moody', 'Sand Veil', 'Shadow Tag', 'Snow Cloak', 'King\'s Rock', 'Razor Fang', 'Baton Pass', 'Last Respects', 'Shed Tail'],
+	},
+
+	{
 		section: "S/V Singles",
 	},
 	{
