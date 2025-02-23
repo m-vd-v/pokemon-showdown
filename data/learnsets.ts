@@ -2,14 +2,14 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 
 	colossiff: {
 		learnset: {
-			headsmash: ["3L1"],
-			wavecrash: ["3L1"],
-			woodhammer: ["3L1"],
-			heavyslam: ["3L1"],
-			earthquake: ["3L1"],
-			leechseed: ["3L1"],
-			bulkup: ["3L1"],
-			rockpolish: ["3L1"],
+			headsmash: ["9L1"],
+			wavecrash: ["9L1"],
+			woodhammer: ["9L1"],
+			heavyslam: ["9L1"],
+			earthquake: ["9L1"],
+			leechseed: ["9L1"],
+			bulkup: ["9L1"],
+			rockpolish: ["9L1"],
 		},
 	},
 
