@@ -1,6 +1,93 @@
 // List of flags and their descriptions can be found in sim/dex-moves.ts
 
 export const Moves: import('../sim/dex-moves').MoveDataTable = {
+	needlerapier: {
+		num: 6901,
+		accuracy: 90,
+		basePower: 90,
+		category: "Physical",
+		name: "Needle Rapier",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			this.boost({accuracy: 1}, attacker, attacker, move);
+		},
+		target: "normal",
+		type: "Grass",
+		contestType: "Cool",
+	},
+	trickyjab: {
+		num: 6902,
+		accuracy: 75,
+		basePower: 95,
+		category: "Physical",
+		name: "Needle Rapier",
+		pp: 10,
+		priority: 0,
+		willCrit: false,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.boosts.accuracy > 0) { // if attacker has an accuracy boost, will always crit
+				move.willCrit = true;
+			}
+		},
+		target: "normal",
+		type: "Fairy",
+		contestType: "Cool",
+	},
+	rudeawakening: {
+		num: 6903,
+		accuracy: 100,
+		basePower: 110,
+		category: "Physical",
+		name: "Rude Awakening",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		sleepUsable: true,
+		onTry(source) {	// check if pkmn is asleep to succeed
+			return source.status === 'slp' || source.hasAbility('comatose');
+		},
+		onHit(target, source) {	// cure sleep
+			let success = false;
+			if (source.cureStatus()) {
+				success = true;
+			}
+			return success;
+		},
+		target: "normal",
+		type: "Normal",
+		contestType: "Cool",
+	},
+	colossisize: {
+		num: 6904,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Colossisize",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1, metronome: 1},
+		boosts: {
+			atk: 2, spa: 2, def: 2, spd: 2
+		},
+		secondary: null,
+		target: "self",
+		type: "Fighting",
+		zMove: {boost: {atk: 1}},
+		contestType: "Cool",
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('truant');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Truant', '[from] move: Colossisize');
+				return;
+			}
+			return oldAbility as false | null;
+		},
+	},
+
+
 	"10000000voltthunderbolt": {
 		num: 719,
 		accuracy: true,
